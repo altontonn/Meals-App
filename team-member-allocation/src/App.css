@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+.card-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
