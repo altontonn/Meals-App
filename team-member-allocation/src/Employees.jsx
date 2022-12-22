@@ -5,7 +5,7 @@ import maleProfile from "./images/maleProfile.jpg";
 
 const Employees = () => {
   // eslint-disable-next-line
-  const [ employees, setEmployees ] = useState([
+  const [employees, setEmployees] = useState([
     {
       id: 1,
       fullName: "Bob Jones",
@@ -89,7 +89,7 @@ const Employees = () => {
       designation: "Graphic Designer",
       gender: "male",
       teamName: "TeamD",
-    }
+    },
   ]);
   return (
     <main className="container">
@@ -106,22 +106,37 @@ const Employees = () => {
       <div className="row justify-content-center mt-3 mb-3">
         <div className="col-8">
           <div className="card-collection">
-            {
-              employees.map((employee) => (
-                <div id={employee.id} className="card m-2" style={{ cursor: "pointer" }}>
-                  {(employee.gender === "male") ? <img src={maleProfile} className="card-img-top" alt="male profile"/> : <img src={femaleProfile} className="card-img-top" alt="male profile"/>
-                  }
-                  <div className="card-body">
-                    <h5 className="card-title">Full Name: {employee.fullName}</h5>
-                    <p className="card-text"><b>Designation:</b> {employee.designation}</p>
-                  </div>
+            {employees.map((employee) => (
+              <div
+                id={employee.id}
+                className="card m-2"
+                style={{ cursor: "pointer" }}
+              >
+                {employee.gender === "male" ? (
+                  <img
+                    src={maleProfile}
+                    className="card-img-top"
+                    alt="male profile"
+                  />
+                ) : (
+                  <img
+                    src={femaleProfile}
+                    className="card-img-top"
+                    alt="male profile"
+                  />
+                )}
+                <div className="card-body">
+                  <h5 className="card-title">Full Name: {employee.fullName}</h5>
+                  <p className="card-text">
+                    <b>Designation:</b> {employee.designation}
+                  </p>
                 </div>
-              ))
-            }
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </main>
-  )
+  );
 };
 export default Employees;
