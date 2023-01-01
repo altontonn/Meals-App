@@ -1,3 +1,4 @@
+import { BsHandThumbsUp } from 'react-icons/bs'
 import { useGlobalContext } from "../Context";
 const Meals = () => {
   const { meals }= useGlobalContext();
@@ -11,7 +12,7 @@ const Meals = () => {
           <img src={image} className="img" alt="food"/>
           <footer>
             <h5>{title}</h5>
-            <button className="like-btn">click me</button>
+            <button className="like-btn"><BsHandThumbsUp /></button>
           </footer>
         </article>
       })}
