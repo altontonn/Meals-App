@@ -8,20 +8,26 @@ const allMealsUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=a";
 
 const AppProvider = ({ children }) => {
   const [meals, setMeals] = useState([]);
+  const [loading, setLoading] = useState(false);
   const fetchMeals = async (url) => {
+    setLoading(true)
     try {
       const { data } = await axios(url);
-      setMeals(data.meals)
-      console.log(data)
+      if(data.meals) {
+        setMeals(data.meals)
+      } else {
+        setMeals([])
+      }
     } catch (error) {
       console.log(error);
     }
+    setLoading(false)
   }
   useEffect(() => {
     fetchMeals(allMealsUrl);
   }, [])
   return (
-    <AppContext.Provider value={{meals}}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{loading, meals}}>{children}</AppContext.Provider>
   );
 };
 
