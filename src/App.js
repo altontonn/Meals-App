@@ -2,15 +2,15 @@ import './App.css';
 // import Favorites from './Components/Favorites';
 import Meals from './Components/Meals';
 // import Modal from './Components/Modal';
-// import Search from './Components/Search';
+import Search from './Components/Search';
 
 function App() {
   return (
     <main>
+      <Search />
       {/* <Favorites /> */}
-      {/* <Modal /> */}
       <Meals />
-      {/* <Search /> */}
+      {/* <Modal /> */}
     </main>
   );
 }
