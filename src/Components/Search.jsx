@@ -3,11 +3,16 @@ import { useGlobalContext } from "../Context";
 
 const Search = () => {
   const [text, setText] = useState('');
+  const {setSearchTerm} = useGlobalContext();
   const handleChange = (e) => {
     setText(e.target.value);
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(text) {
+      setSearchTerm(text);
+      setText('')
+    }
   }
     return <header className="search-container">
       <form onSubmit={handleSubmit}>
