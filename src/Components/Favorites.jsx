@@ -11,8 +11,9 @@ const Favorites = () => {
             const { idMeal, strMealThumb: image } = item;
             return (
               <div key={idMeal} className="favorite-item">
-                <img src={image} tabIndex={0} className="favorites-img img" alt="favorite" onClick={() => selectMeal(idMeal, true)} onKeyDown={() => selectMeal(idMeal, true)} />
-                <button className="remove-btn" onClick={() => removeFromFavorites(idMeal)}  onKeyDown={() => removeFromFavorites(idMeal)}>remove</button>
+                // eslint-disable-next-line no-noninteractive-element-interactions
+                <img src={image} role="img" tabindex={0} className="favorites-img img" alt="favorite" onClick={() => selectMeal(idMeal, true)}/>
+                <button className="remove-btn" onClick={() => removeFromFavorites(idMeal)}>remove</button>
               </div>
             )
           })}
