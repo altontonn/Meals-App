@@ -25,10 +25,13 @@ const Meals = () => {
         const { idMeal, strMeal: title, strMealThumb: image } = singleMeal;
         return (
           <article key={idMeal} className="single-meal">
+            {/* eslint-disable */}
             <img src={image} className="img" onClick={() => selectMeal(idMeal)} alt="food" />
             <footer>
               <h5>{title}</h5>
-              <button className="like-btn" type="button" onClick={() => addToFavorites(idMeal)}><BsHandThumbsUp />Like</button>
+              <button className="like-btn" type="button" onClick={() => addToFavorites(idMeal)}>
+                <BsHandThumbsUp />
+              </button>
             </footer>
           </article>
         );
