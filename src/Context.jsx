@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
 const AppContext = React.createContext();
 
-const allMealsUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-const randomMealUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
+const allMealsUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
 const getFavoritesFromLocalStorage = () => {
-  let favorites = localStorage.getItem("favorites");
+  let favorites = localStorage.getItem('favorites');
   if (favorites) {
-    favorites = JSON.parse(localStorage.getItem("favorites"));
+    favorites = JSON.parse(localStorage.getItem('favorites'));
   } else {
     favorites = [];
   }
@@ -18,7 +18,7 @@ const getFavoritesFromLocalStorage = () => {
 const AppProvider = ({ children }) => {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [favorites, setFavorites] = useState(getFavoritesFromLocalStorage());
@@ -62,13 +62,13 @@ const AppProvider = ({ children }) => {
     if (alreadyFavorite) return;
     const updatedFavorites = [...favorites, meal];
     setFavorites(updatedFavorites);
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 
   const removeFromFavorites = (idMeal) => {
     const updatedFavorites = favorites.filter((meal) => meal.idMeal !== idMeal);
     setFavorites(updatedFavorites);
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 
   useEffect(() => {
@@ -101,7 +101,5 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export const useGlobalContext = () => {
-  return useContext(AppContext);
-};
+export const useGlobalContext = () => { return useContext(AppContext); };
 export { AppContext, AppProvider };

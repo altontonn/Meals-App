@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../Context";
+import { useGlobalContext } from '../Context';
 
 const Modal = () => {
   const { selectedMeal, closeModal } = useGlobalContext();
@@ -16,10 +16,10 @@ const Modal = () => {
           <h4>{title}</h4>
           <p>Cooking Instructions</p>
           <p>{text}</p>
-          <a href={source} target="_blank"  rel="noreferrer">
+          <a href={source} target="_blank" rel="noreferrer">
             Original Source
           </a>
-          <button className="btn btn-hipster close-btn" onClick={closeModal}>
+          <button className="btn btn-hipster close-btn" type="button" onClick={closeModal}>
             close
           </button>
         </div>

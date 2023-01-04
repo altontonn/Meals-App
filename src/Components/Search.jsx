@@ -27,6 +27,6 @@ const Search = () => {
         <button type="button" className="btn btn-hipster" onClick={handleRandomMeal}>suprise me!</button>
       </form>
     </header>
-  )
+  );
 };
 export default Search;

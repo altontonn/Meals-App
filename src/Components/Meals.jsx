@@ -3,7 +3,7 @@ import { useGlobalContext } from '../Context';
 
 const Meals = () => {
   const {
-    meals, loading, selectMeal, addToFavorites 
+    meals, loading, selectMeal, addToFavorites,
   } = useGlobalContext();
   if (loading) {
     return (
@@ -25,15 +25,15 @@ const Meals = () => {
         const { idMeal, strMeal: title, strMealThumb: image } = singleMeal;
         return (
           <article key={idMeal} className="single-meal">
-            <img src={image} className="img" onClick={() => selectMeal(idMeal)} alt="food"/>
+            <img src={image} className="img" onClick={() => selectMeal(idMeal)} alt="food" />
             <footer>
               <h5>{title}</h5>
-              <button className="like-btn" onClick={() => addToFavorites(idMeal)}><BsHandThumbsUp /></button>
+              <button className="like-btn" type="button" onClick={() => addToFavorites(idMeal)}><BsHandThumbsUp />Like</button>
             </footer>
           </article>
         );
       })}
     </section>
-  )
+  );
 };
 export default Meals;
