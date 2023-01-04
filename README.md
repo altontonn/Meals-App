@@ -1,15 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Meals App
 
-> Description the project.
+> This is a meal app that fetches data from an API and displays a list of meals per search. You can also choose a random meal by clicking on the surprise me button. It also displays the list of favorite meals per like and users can view more details about the meal.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
 
 ## Live Demo (if available)
 
@@ -18,45 +16,35 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
 ### Setup
+Clone this repository to your desired folder:
+
+```sh
+cd my-folder
+git clone https://github.com/altontonn/Meals-App
+```
 
 ### Install
+```sh
+npm install
+npm start # this will make react watching for your changes in code
+```
 
-### Usage
+## Author
 
-### Run tests
+👤 **Author**
 
-### Deployment
+👤 **Newton Alumasa**
 
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [Github](https://github.com/altontonn/)
+- [Twitter](https://twitter.com/AlumasaNewton)
+- [Linkedin](https://www.linkedin.com/in/newton-alumasa/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/altontonn/Meals-App/issues).
 
 ## Show your support
 
@@ -64,9 +52,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- I would like to thank Gavin Lon for instructions and guidance in this react project
 
 ## 📝 License
 

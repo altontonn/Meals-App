@@ -6,7 +6,7 @@ import Search from './Components/Search';
 import { useGlobalContext } from './Context';
 
 function App() {
-  const {showModal, favorites} = useGlobalContext();
+  const { showModal, favorites } = useGlobalContext();
   return (
     <main>
       <Search />
