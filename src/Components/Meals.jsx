@@ -2,9 +2,7 @@ import { BsHandThumbsUp } from 'react-icons/bs';
 import { useGlobalContext } from '../Context';
 
 const Meals = () => {
-  const { 
-    meals, loading, selectMeal, addToFavorites 
-  } = useGlobalContext();
+  const { meals, loading, selectMeal, addToFavorites } = useGlobalContext();
 
   if (loading) {
     return (
@@ -13,7 +11,6 @@ const Meals = () => {
       </section>
     )
   }
-  
   if(meals.length < 1) {
     return (
       <section className="section">
@@ -21,7 +18,6 @@ const Meals = () => {
       </section>
     )
   };
-
   return (
     <section className="section-center">
       {meals.map((singleMeal) => {
