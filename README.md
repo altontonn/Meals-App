@@ -52,7 +52,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- I would like to thank Gavin Lon for instructions and guidance in this react project
+- I would like to thank John Smilga for instructions and guidance in this react project
 
 ## 📝 License
 
