@@ -19,6 +19,6 @@ const Favorites = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };
 export default Favorites;
