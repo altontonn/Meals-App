@@ -11,7 +11,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo](https://soup-hub.netlify.app/)
 
 
 ## Getting Started
@@ -31,8 +31,6 @@ npm start # this will make react watching for your changes in code
 ```
 
 ## Author
-
-👤 **Author**
 
 👤 **Newton Alumasa**
 
