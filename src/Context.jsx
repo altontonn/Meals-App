@@ -32,6 +32,7 @@ const AppProvider = ({ children }) => {
         setMeals([]);
       }
     } catch (error) {
+      // eslint-disable-next-line
       console.log(error);
     }
     setLoading(false);
