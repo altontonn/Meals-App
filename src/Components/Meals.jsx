@@ -1,5 +1,6 @@
 import { BsHandThumbsUp } from 'react-icons/bs';
 import { useGlobalContext } from '../Context';
+
 const Meals = () => {
   const { 
     meals, loading, selectMeal, addToFavorites 

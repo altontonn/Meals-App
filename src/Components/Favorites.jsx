@@ -2,6 +2,12 @@ import { useGlobalContext } from '../Context';
 
 const Favorites = () => {
   const { favorites, selectMeal, removeFromFavorites } = useGlobalContext();
+  
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      removeFromFavorites(idMeal);
+    }
+  }
   return (
     <section className="favorites">
       <div className="favorites-content">
@@ -11,8 +17,8 @@ const Favorites = () => {
             const { idMeal, strMealThumb: image } = item;
             return (
               <div key={idMeal} className="favorite-item">
-                <img src={image} className="favorites-img img" alt="favorite" onClick={() => selectMeal(idMeal, true)} />
-                <button className="remove-btn" type="button" onClick={() => removeFromFavorites(idMeal)}>remove</button>
+                <img src={image} className="favorites-img img" alt="favorite" onClick={() => selectMeal(idMeal, true)} onKeyDown={handleKeyDown} />
+                <button className="remove-btn" type="button" onClick={() => removeFromFavorites(idMeal)} onKeyDown={handleKeyDown} >remove</button>
               </div>
             );
           })};
