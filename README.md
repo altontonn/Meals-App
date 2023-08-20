@@ -1,9 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Meals App
 
 > This is a meal app that fetches data from an API and displays a list of meals per search. You can also choose a random meal by clicking on the surprise me button. It also displays the list of favorite meals per like and users can view more details about the meal.
-
 
 ## Built With
 
@@ -12,7 +9,6 @@
 ## Live Demo (if available)
 
 [Live Demo](https://soup-hub.netlify.app/)
-
 
 ## Getting Started
 
